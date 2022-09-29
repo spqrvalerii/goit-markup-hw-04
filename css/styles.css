@@ -9,6 +9,7 @@
    --hero-footer-bg-color: #2F303A;
    --button-hover-focus-bg-color: #188CE8;
    --projects-card-border-color: #EEEEEE;
+   --button-secondary-bg-color: #F5F4FA;
 }
 
 h1,
@@ -179,7 +180,7 @@ body {
 .button {
    color: var(--primary-bg-color);
    background-color: var(--accent-color);
-   border: 1px solid transparent;
+   border: none;
    cursor: pointer;
    font-family: 'Roboto';
    font-weight: 700;
@@ -266,7 +267,8 @@ body {
 .team-text {
    font-weight: 400;
    font-size: 16px;
-   line-height: 1.19;   
+   line-height: 1.19;
+   margin-bottom: 16px;   
 }
 .team-list {
    display: flex;
@@ -284,6 +286,17 @@ body {
    border-right: var(--projects-card-border-color);
    border-left: var(--projects-card-border-color);
    border-bottom: var(--projects-card-border-color);
+}
+
+/* ======================clients================== */
+.clients-section-title {
+   color: var(--title-text-color);
+   font-weight: 700;
+   font-size: 36px;
+   line-height: 1.17;
+   text-align: center;
+   letter-spacing: 0.03em;
+   margin-bottom: 50px;
 }
 
 /* =======================footer=================== */
@@ -364,8 +377,8 @@ body {
 .button-secondary {
    text-decoration: none;
    color: var(--title-text-color);
-   background-color: var(--primary-bg-color);
-   border: transparent;
+   background-color: var(--button-secondary-bg-color) ;
+   border: none;
    cursor: pointer;
    font-family: 'Roboto';
    font-style: normal;
@@ -373,6 +386,7 @@ body {
    font-size: 16px;
    line-height: 1.63;
    padding: 6px 22px;
+   border-radius: 4px;
 }
 
 .button-secondary:hover,
@@ -405,7 +419,7 @@ body {
    line-height: 1.88;
 }
 .projects-card-wrapper {
-   padding-top: 20px;
+   padding: 20px 24px;
    padding-bottom: 20px;
    border-left: 1px solid var(--projects-card-border-color) ;
    border-right: 1px solid var(--projects-card-border-color) ;
