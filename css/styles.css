@@ -10,6 +10,7 @@
    --button-hover-focus-bg-color: #188CE8;
    --projects-card-border-color: #EEEEEE;
    --button-secondary-bg-color: #F5F4FA;
+   --icons-color: #AFB1B8;
 }
 
 h1,
@@ -102,13 +103,19 @@ body {
    display: flex;
    column-gap: 40px;
 }
-.contacts {
+.contacts-list {
    display: flex;
    align-items: center;
    column-gap: 50px;
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 500;
+   font-size: 14px;
+   line-height: 16px;
+   letter-spacing: 0.02em;
 }
 
-.page-header .link {
+.page-header {
    color: var(--header-logo-color) ;
    font-family: Raleway, sans-serif;
    font-weight: 700;
@@ -144,26 +151,42 @@ body {
 .nav-style .link.current {
    color: var(--accent-color) ;
 }
-.contacts .link {
+.contacts-link {
    color: var(--primary-text-color);
    font-family: Roboto, sans-serif;
    font-weight: 500;
    font-size: 14px;
    line-height: 1.14;
 }
-.contacts .link:hover,
-.contacts .link:focus {
+
+.contacts-link:hover, .contacts-link:focus {
    color: var(--accent-color);
 }
+
+.contacts-icon {
+   fill: var(--primary-text-color);
+   margin-right: 10px;
+}
+
+.contacts-link:hover .contacts-icon,
+.contacts-link:focus .contacts-icon {
+   fill: var(--accent-color);
+}
+
 
 /* ====================hero======================= */
 .hero {
    background-color: var(--hero-footer-bg-color);
-   background-image: url('../images/img-theme.jpg');
+   background-image:
+   linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../images/img-theme.jpg');
    text-align: center;
    padding-bottom: 200px;
    padding-top: 200px;
+   background-repeat: no-repeat;
+   background-size: cover;
 }
+
+
 .hero-title {
    color: var(--primary-bg-color) ;
    font-style: normal;
@@ -227,6 +250,15 @@ body {
    flex-basis: calc((100% - 3 * 30px) / 4);
 }
 
+.feature-icon-box {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 30px;
+   padding: 25px 100px;
+   background-color: var(--button-secondary-bg-color);
+}
+
 /* =================example===================== */
 .example {
    padding-top: 47px;
@@ -284,6 +316,7 @@ body {
    flex-basis: calc((100% - 3 * 30px) / 4);
 }
 .team-card-wrapper {
+   background-color: var(--primary-bg-color) ;
    padding-top: 30px;
    padding-bottom: 30px;
    text-align: center;
@@ -292,6 +325,41 @@ body {
    border-left: var(--projects-card-border-color);
    border-bottom: var(--projects-card-border-color);
 }
+
+.social-list {
+   display: flex;
+   justify-content: center;
+   column-gap: 10px;
+}
+
+.social-list-item {
+
+}
+
+.social-list-link {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 44px;
+   height: 44px;
+   border-radius: 50%;
+   background-color: var(--primary-bg-color);
+}
+
+.social-list-link:hover,
+.social-list-link:focus {
+   background-color: var(--accent-color);   
+}
+
+.social-list-link:hover .social-list-icon,
+.social-list-link:focus .social-list-icon {
+   fill: var(--primary-bg-color);
+}
+
+.social-list-icon {
+   fill: var(--icons-color);
+}
+
 
 /* ======================clients================== */
 .clients-section-title {
@@ -303,6 +371,41 @@ body {
    letter-spacing: 0.03em;
    margin-bottom: 50px;
 }
+
+.clients-list {
+   display: flex;
+   justify-content: center;
+   column-gap: 30px;
+}
+
+.clients-list-item {
+   fill: var(--primary-text-color);
+}
+
+.clients-list-link {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   box-sizing: border-box;
+   border: 1px solid var(--icons-color);
+   width: 170px;
+   height: 92px;
+   border-radius: 4px;
+   background-color: var(--primary-bg-color);
+}
+
+.clients-list-icon {
+   fill: var(--icons-color);   
+}
+.clients-list-link:hover, .clients-list-link:focus {
+   border-color: var(--accent-color);
+}
+
+.clients-list-link:hover .clients-list-icon,
+.clients-list-link:focus .clients-list-icon {
+   fill: var(--accent-color);   
+}
+
 
 /* =======================footer=================== */
 .page-footer {
@@ -369,6 +472,67 @@ body {
 .address .link:focus {
    color: var(--accent-color);
 }
+
+.footer-wrapper {
+   
+}
+
+.footer-text {
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 14px;
+   line-height: 16px;
+   letter-spacing: 0.03em;
+   text-transform: uppercase;
+   color: var(--primary-bg-color);
+   margin-bottom: 20px;
+}
+
+.footer-list {
+   display: flex;
+   justify-content: center;
+   column-gap: 10px;
+}
+
+.footer-list-item {
+
+}
+
+.footer-list-link {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 44px;
+   height: 44px;
+   border-radius: 50%;
+   background-color: var(--primary-bg-color);
+   background: rgba(255, 255, 255, 0.1);
+}
+
+.footer-list-link:hover,
+.footer-list-link:focus {
+   background-color: var(--accent-color);
+}
+
+/* .footer-list-link:hover .footer-list-icon,
+.footer-list-link:focus .footer-list-icon {
+   fill: var(--primary-bg-color);
+} */
+
+.footer-list-icon {
+   fill: var(--primary-bg-color);
+}
+
+.main-footer {
+   margin-right: 70px;
+}
+
+.footer-box {
+   display: flex;
+   align-items: baseline;
+}
+
 
 /* =================Portfolio================== */
 .projects-filter {
